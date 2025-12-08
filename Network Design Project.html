@@ -1,0 +1,82 @@
+<!-- Network Design Project Section -->
+<section class="project-card" id="network-project" style="margin-top: 2rem;">
+  <h3 class="section-title">Secure Network Design – 3 Floor Office</h3>
+
+  <!-- Short description -->
+  <p>
+    This project demonstrates my ability to design a secure, scalable, enterprise-style 
+    network for a multi-floor office building. The design includes VLAN segmentation, a 
+    Layer-3 core router for inter-VLAN routing, secure firewall policies, VPN remote access, 
+    and dual-SSID Wi-Fi for corporate and guest users.
+  </p>
+
+  <!-- Diagram image -->
+  <img src="assets/network-diagram.png" 
+       alt="Network diagram designed by Nahin" 
+       style="width:100%; max-width:850px; border-radius:10px; margin:1rem 0;">
+
+  <!-- Key Technical Points -->
+  <h4>Key Technical Highlights</h4>
+  <ul>
+    <li>Architecture: <strong>Internet → Firewall → Core Router → Access Layer</strong></li>
+    <li>Inter-VLAN routing performed by <strong>Layer-3 Core Router</strong></li>
+    <li>Department segmentation using VLANs:
+      <ul>
+        <li>VLAN 10 – HR → 10.10.10.0/24</li>
+        <li>VLAN 20 – Finance → 10.10.20.0/24</li>
+        <li>VLAN 30 – IT → 10.10.30.0/24</li>
+        <li>VLAN 40 – Servers → 10.10.40.0/24</li>
+        <li>VLAN 50 – Guest → 10.10.50.0/24</li>
+        <li>VLAN 60 – Management → 10.10.60.0/24</li>
+      </ul>
+    </li>
+    <li>Servers grouped in VLAN 40 (File, App, Log/SIEM)</li>
+    <li>Firewall enforces east-west and north-south traffic policies</li>
+    <li>Remote users connect securely through <strong>VPN</strong></li>
+    <li>Enterprise Wi-Fi design:
+      <ul>
+        <li><strong>CorpNet → VLAN 30 → 10.10.30.0/24</strong></li>
+        <li><strong>GuestNet → VLAN 50 → 10.10.50.0/24</strong></li>
+      </ul>
+    </li>
+    <li>Diagram created in Draw.io using Cisco-style symbols</li>
+  </ul>
+
+  <!-- Downloadable Files -->
+  <h4>Downloads</h4>
+  <p>
+    <a href="assets/network-diagram.pdf" target="_blank">Download Network Diagram (PDF)</a><br>
+    <a href="assets/network-diagram.pptx" target="_blank">Download PowerPoint Version</a>
+  </p>
+
+  <!-- Skills Demonstrated -->
+  <h4>Skills Demonstrated</h4>
+  <p>
+    <span class="badge">Layer 3 Routing</span>
+    <span class="badge">Firewall Security</span>
+    <span class="badge">VLAN Segmentation</span>
+    <span class="badge">Cisco Network Design</span>
+    <span class="badge">Wi-Fi Architecture</span>
+    <span class="badge">VPN Remote Access</span>
+    <span class="badge">Technical Documentation</span>
+  </p>
+
+  <!-- Presentation Script -->
+  <details style="margin-top: 1rem;">
+    <summary style="cursor:pointer; font-weight:bold;">Presentation Script (Click to Expand)</summary>
+    <p style="margin-top:0.8rem;">
+      For this project, I approached it as an IT consulting company designing a secure network 
+      for a three-floor office building. The goal was to create a segmented network that protects 
+      sensitive departments like HR and Finance while supporting IT operations, servers, and guest Wi-Fi.
+      <br><br>
+      Traffic flows from the Internet through a firewall to a Layer-3 core router, which performs 
+      inter-VLAN routing between HR, Finance, IT, Servers, Guest, and Management networks. Guest Wi-Fi 
+      is fully isolated, while CorpNet provides secure internal access. Remote employees connect 
+      through VPN for safe access to internal resources.
+      <br><br>
+      This design reflects real enterprise networking practices and demonstrates my understanding of 
+      VLANs, routing, firewall rules, wireless architecture, and secure network segmentation.
+    </p>
+  </details>
+
+</section>
