@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nahin Mousa – IT Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f5f7;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #111827;
+    }
+    .profile-text h2 {
+      margin-bottom: 0.5rem;
+    }
+    .profile-text p {
+      margin-bottom: 0.3rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #e5e7eb;
+      color: #111827;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-right: 0.3rem;
+      margin-top: 0.2rem;
+    }
+    h3.section-title {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: #111827;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card h4 {
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+    .project-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+    .project-card a {
+      text-decoration: none;
+      color: #1d4ed8;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0 2rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nahin Mousa – IT Solutions</h1>
+    <p>SharePoint · Networking · Cybersecurity · Data & Automation</p>
+  </header>
+
+  <main class="container">
+    <!-- Profile section -->
+    <section class="profile">
+      <img src="images/profile.jpg" alt="Nahin Mousa profile photo" />
+      <div class="profile-text">
+        <h2>Hello, I'm Nahin 👋</h2>
+        <p>IT professional with experience in SharePoint, networking, cybersecurity fundamentals, and data analytics.</p>
+        <p>I design practical solutions: secure networks, IT resource centers, automation, and security dashboards.</p>
+        <p>
+          <span class="badge">SharePoint & Microsoft 365</span>
+          <span class="badge">Networking & VLANs</span>
+          <span class="badge">Power BI & Data</span>
+          <span class="badge">Python & SQL (in progress)</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+ <section>
+  <h3 class="section-title">Projects & Services</h3>
+  <div class="projects">
+
+    <!-- 1. Michels SharePoint project -->
+    <article class="project-card">
+      <h4>IT Resource Center – SharePoint Site</h4>
+      <p>
+        A modern SharePoint communication site designed as an IT Resource Center:
+        policies, self-service guides, training, and automated document lifecycle
+        using Power Automate.
+      </p>
+      <!-- Example: PDF or PPT in your portfolio repo -->
+      <a href="https://nmousa-netizen.github.io/portfolio/michels-it-resource-center.pdf" target="_blank">
+        View project (PDF)
+      </a>
+    </article>
+
+    <!-- 2. Network design -->
+    <article class="project-card">
+      <h4>Secure Network Design – 3 Floor Office</h4>
+      <p>
+        Logical network design using VLANs, a core router, firewall, guest Wi-Fi,
+        and VPN remote access. Includes segmentation for HR, Finance, IT, Servers,
+        and Management.
+      </p>
+      <!-- Example: PNG exported from draw.io and saved in /assets/ -->
+      <a href="https://nmousa-netizen.github.io/portfolio/assets/network-diagram.png" target="_blank">
+        View network diagram
+      </a>
+    </article>
+
+    <!-- 3. Live phishing/suspicious email dashboard -->
+    <article class="project-card">
+      <h4>Phishing Report Dashboard (SharePoint + Power BI)</h4>
+      <p>
+        End-to-end solution where users report suspicious emails through a form,
+        data is stored in SharePoint, and a live Power BI dashboard shows open
+        cases, categories, and trends.
+      </p>
+      <!-- Example: link to a PPT or demo image -->
+      <a href="https://nmousa-netizen.github.io/portfolio/assets/phishing-dashboard.png" target="_blank">
+        View dashboard mockup
+      </a>
+    </article>
+
+    <!-- 4. Python + SQL + Data project -->
+    <article class="project-card">
+      <h4>Security Events – Python, SQL & Analytics</h4>
+      <p>
+        Mini data pipeline for security events: data stored in SQL tables, loaded and
+        cleaned with Python (pandas), then analyzed to find top users, busiest times,
+        and high-severity alerts.
+      </p>
+      <!-- Example: repo just for this project -->
+      <a href="https://github.com/nmousa-netizen/security-events-python-sql" target="_blank">
+        View code on GitHub
+      </a>
+    </article>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Nahin Mousa · Built with HTML & CSS · Hosted on GitHub Pages
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
