@@ -1,5 +1,10 @@
-<!-- Network Design Project Section -->
- <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure Network Design – 3 Floor Office</title>
+
+<style>
   /* Global Reset */
   * {
     margin: 0;
@@ -12,141 +17,96 @@
     background: #f4f5f7;
     color: #222;
     line-height: 1.6;
-  }
-
-  /* HEADER */
-  header {
-    background: #111827;
-    color: white;
-    padding: 2.5rem 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  header h1 {
-    font-size: 2.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-
-  header p {
-    opacity: 0.9;
-    font-size: 1rem;
+    padding-bottom: 4rem;
   }
 
   /* MAIN CONTAINER */
   .container {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1050px;
+    margin: 2rem auto;
     padding: 0 1.2rem;
   }
 
-  /* PROFILE CARD */
-  .profile {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    background: white;
-    padding: 1.8rem;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    margin-bottom: 3rem;
-  }
-
-  .profile img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #111827;
-  }
-
-  .profile-text h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .profile-text p {
-    margin-bottom: 0.4rem;
-  }
-
-  /* BADGES */
-  .badge {
-    display: inline-block;
-    padding: 0.3rem 0.7rem;
-    background: #e5e7eb;
-    border-radius: 999px;
-    margin-right: 0.4rem;
-    margin-bottom: 0.4rem;
-    font-size: 0.8rem;
-  }
-
-  /* SECTIONS */
+  /* SECTION TITLE */
   h3.section-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     border-left: 5px solid #111827;
-    padding-left: 0.5rem;
+    padding-left: 0.6rem;
+    font-weight: bold;
   }
 
-  /* PROJECT CARDS */
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
+  /* Project Card */
   .project-card {
     background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease;
-  }
-
-  .project-card:hover {
-    transform: translateY(-5px);
+    padding: 1.8rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2.5rem;
   }
 
   .project-card h4 {
+    font-size: 1.2rem;
+    margin-top: 1.3rem;
     margin-bottom: 0.6rem;
-    font-size: 1.1rem;
+    font-weight: bold;
     color: #111827;
   }
 
   .project-card p {
-    font-size: 0.9rem;
     margin-bottom: 1rem;
+    font-size: 1rem;
     color: #444;
   }
 
-  /* PROJECT LINK BUTTON */
+  /* Image */
+  .project-image {
+    width: 100%;
+    max-width: 950px;
+    display: block;
+    border-radius: 10px;
+    margin: 1rem 0 1.5rem;
+  }
+
+  /* Bulleted lists */
+  .project-card ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-card ul ul {
+    margin-top: 0.35rem;
+  }
+
+  /* Buttons */
   .project-card a {
     display: inline-block;
-    padding: 0.4rem 0.8rem;
+    padding: 0.65rem 1.3rem;
     background: #111827;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    transition: background 0.2s ease;
+    border-radius: 8px;
+    margin-top: 0.4rem;
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
   }
 
   .project-card a:hover {
     background: #1f2937;
   }
 
-  /* IMAGES WITHIN PROJECT SECTIONS */
-  .project-image {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 10px;
-    margin: 1rem 0;
-    display: block;
+  /* Skills (Badges) */
+  .badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    background: #e5e7eb;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.5rem;
   }
 
-  /* DETAILS (Expandable Sections) */
+  /* Presentation Script Box */
   details {
     background: #f9fafb;
     padding: 1rem;
@@ -160,99 +120,105 @@
     font-weight: bold;
     font-size: 1rem;
   }
-
-  /* FOOTER */
-  footer {
-    margin-top: 3rem;
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 0.9rem;
-    color: #6b7280;
-  }
 </style>
 
-<section class="project-card" id="network-project" style="margin-top: 2rem;">
-  <h3 class="section-title">Secure Network Design – 3 Floor Office</h3>
+</head>
+<body>
 
-  <!-- Short description -->
-  <p>
-    This project demonstrates my ability to design a secure, scalable, enterprise-style 
-    network for a multi-floor office building. The design includes VLAN segmentation, a 
-    Layer-3 core router for inter-VLAN routing, secure firewall policies, VPN remote access, 
-    and dual-SSID Wi-Fi for corporate and guest users.
-  </p>
+<div class="container">
 
-  <!-- Diagram image -->
-  <img src="https://nmousa-netizen.github.io/nahin-portfolio/3Floor_Office_Logical_Network.drawio.png" 
-       alt="Network diagram designed by Nahin" 
-       style="width:100%; max-width:850px; border-radius:10px; margin:2rem 0;text-align: center;">
+  <!-- NETWORK DESIGN PROJECT CARD -->
+  <section class="project-card" id="network-project">
 
-  <!-- Key Technical Points -->
-  <h4>Key Technical Highlights</h4>
-  <ul>
-    <li>Architecture: <strong>Internet → Firewall → Core Router → Access Layer</strong></li>
-    <li>Inter-VLAN routing performed by <strong>Layer-3 Core Router</strong></li>
-    <li>Department segmentation using VLANs:
-      <ul>
-        <li>VLAN 10 – HR → 10.10.10.0/24</li>
-        <li>VLAN 20 – Finance → 10.10.20.0/24</li>
-        <li>VLAN 30 – IT → 10.10.30.0/24</li>
-        <li>VLAN 40 – Servers → 10.10.40.0/24</li>
-        <li>VLAN 50 – Guest → 10.10.50.0/24</li>
-        <li>VLAN 60 – Management → 10.10.60.0/24</li>
-      </ul>
-    </li>
-    <li>Servers grouped in VLAN 40 (File, App, Log/SIEM)</li>
-    <li>Firewall enforces east-west and north-south traffic policies</li>
-    <li>Remote users connect securely through <strong>VPN</strong></li>
-    <li>Enterprise Wi-Fi design:
-      <ul>
-        <li><strong>CorpNet → VLAN 30 → 10.10.30.0/24</strong></li>
-        <li><strong>GuestNet → VLAN 50 → 10.10.50.0/24</strong></li>
-      </ul>
-    </li>
-    <li>Diagram created in Draw.io using Cisco-style symbols</li>
-  </ul>
+    <h3 class="section-title">Secure Network Design – 3 Floor Office</h3>
 
-  <!-- Downloadable Files -->
-  <h4>Downloads</h4>
-  <p>
-    <a href="assets/network-diagram.pdf" target="_blank">Download Network Diagram (PDF)</a><br>
-    <a href="assets/network-diagram.pptx" target="_blank">Download PowerPoint Version</a>
-  </p>
-
-  <!-- Skills Demonstrated -->
-  <h4>Skills Demonstrated</h4>
-  <p>
-    <span class="badge">Layer 3 Routing</span>
-    <span class="badge">Firewall Security</span>
-    <span class="badge">VLAN Segmentation</span>
-    <span class="badge">Cisco Network Design</span>
-    <span class="badge">Wi-Fi Architecture</span>
-    <span class="badge">VPN Remote Access</span>
-    <span class="badge">Technical Documentation</span>
-  </p>
-
-  <!-- Presentation Script -->
-  <details style="margin-top: 1rem;">
-    <summary style="cursor:pointer; font-weight:bold;">Presentation Script (Click to Expand)</summary>
-    <p style="margin-top:0.8rem;">
-      For this project, I approached it as an IT consulting company designing a secure network 
-      for a three-floor office building. The goal was to create a segmented network that protects 
-      sensitive departments like HR and Finance while supporting IT operations, servers, and guest Wi-Fi.
-      <br><br>
-      Traffic flows from the Internet through a firewall to a Layer-3 core router, which performs 
-      inter-VLAN routing between HR, Finance, IT, Servers, Guest, and Management networks. Guest Wi-Fi 
-      is fully isolated, while CorpNet provides secure internal access. Remote employees connect 
-      through VPN for safe access to internal resources.
-      <br><br>
-      This design reflects real enterprise networking practices and demonstrates my understanding of 
-      VLANs, routing, firewall rules, wireless architecture, and secure network segmentation.
+    <!-- Short description -->
+    <p>
+      This project demonstrates my ability to design a secure, scalable, enterprise-grade 
+      network for a multi-floor office building. The solution includes VLAN segmentation, 
+      a Layer-3 core router for inter-VLAN routing, firewall security, VPN remote access, 
+      and dual SSID Wi-Fi for corporate and guest users.
     </p>
-  </details>
 
-</section>
+    <!-- Diagram image -->
+    <img 
+      src="https://nmousa-netizen.github.io/nahin-portfolio/3Floor_Office_Logical_Network.drawio.png"
+      alt="Network diagram designed by Nahin"
+      class="project-image"
+    >
 
+    <!-- Key Technical Points -->
+    <h4>Key Technical Highlights</h4>
+    <ul>
+      <li>Architecture: <strong>Internet → Firewall → Core Router → Access Layer</strong></li>
+      <li>Inter-VLAN routing performed by a <strong>Layer-3 Core Router</strong></li>
 
+      <li><strong>VLAN Segmentation Across Departments</strong>
+        <ul>
+          <li>VLAN 10 – HR → 10.10.10.0/24</li>
+          <li>VLAN 20 – Finance → 10.10.20.0/24</li>
+          <li>VLAN 30 – IT → 10.10.30.0/24</li>
+          <li>VLAN 40 – Servers → 10.10.40.0/24</li>
+          <li>VLAN 50 – Guest → 10.10.50.0/24</li>
+          <li>VLAN 60 – Management → 10.10.60.0/24</li>
+        </ul>
+      </li>
 
+      <li>Servers placed in VLAN 40, including File Server, App Server, and Log/SIEM Server</li>
+      <li>Firewall applies both <strong>north-south</strong> and <strong>east-west</strong> security policies</li>
+      <li>Remote employees connect securely using a <strong>VPN server</strong></li>
 
+      <li><strong>Enterprise Wi-Fi Architecture</strong>
+        <ul>
+          <li>CorpNet → VLAN 30 → 10.10.30.0/24</li>
+          <li>GuestNet → VLAN 50 → 10.10.50.0/24</li>
+        </ul>
+      </li>
+
+      <li>Network diagram created using Draw.io with Cisco-style symbols</li>
+    </ul>
+
+    <!-- Downloads -->
+    <h4>Downloads</h4>
+    <p>
+      <a href="assets/network-diagram.pdf" target="_blank">Download Network Diagram (PDF)</a>
+      <a href="assets/network-diagram.pptx" target="_blank">Download PowerPoint Version</a>
+    </p>
+
+    <!-- Skills Demonstrated -->
+    <h4>Skills Demonstrated</h4>
+    <p>
+      <span class="badge">Layer 3 Routing</span>
+      <span class="badge">Firewall Security</span>
+      <span class="badge">VLAN Segmentation</span>
+      <span class="badge">Cisco Network Design</span>
+      <span class="badge">Wi-Fi Architecture</span>
+      <span class="badge">VPN Remote Access</span>
+      <span class="badge">Technical Documentation</span>
+    </p>
+
+    <!-- Presentation Script -->
+    <details>
+      <summary>Presentation Script (Click to Expand)</summary>
+      <p>
+        For this project, I approached it as an IT consulting company designing a secure 
+        and scalable network for a three-floor office building. The goal was to create a 
+        segmented environment that protects sensitive departments such as HR and Finance, 
+        while supporting IT operations, servers, remote access, and guest Wi-Fi.
+        <br><br>
+        Traffic flows from the Internet through a firewall into a Layer-3 core router, 
+        which performs inter-VLAN routing between HR, Finance, IT, Servers, Guest, and 
+        Management networks. The wireless design separates corporate and guest traffic, 
+        ensuring strong security and performance.
+        <br><br>
+        This project demonstrates my knowledge of VLANs, routing, security policies, 
+        firewall configuration, Wi-Fi architecture, and enterprise-level network design.
+      </p>
+    </details>
+
+  </section>
+
+</div>
+
+</body>
+</html>
