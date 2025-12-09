@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Network Security Log Analyzer – Python, SQL & Firewall Logs</title>
+
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f5f7;
+      color: #222;
+      line-height: 1.6;
+      padding-bottom: 4rem;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1050px;
+      margin: 2rem auto;
+      padding: 0 1.2rem;
+    }
+
+    /* SECTION TITLE */
+    h3.section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #111827;
+      padding-left: 0.6rem;
+      font-weight: bold;
+    }
+
+    /* Project Card */
+    .project-card {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2.5rem;
+    }
+
+    .project-card h4 {
+      font-size: 1.2rem;
+      margin-top: 1.3rem;
+      margin-bottom: 0.6rem;
+      font-weight: bold;
+      color: #111827;
+    }
+
+    .project-card p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    /* Image */
+    .project-image {
+      width: 100%;
+      max-width: 950px;
+      display: block;
+      border-radius: 10px;
+      margin: 1rem 0 1.5rem;
+    }
+
+    /* Bulleted lists */
+    .project-card ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card ul ul {
+      margin-top: 0.35rem;
+    }
+
+    /* Buttons */
+    .project-card a {
+      display: inline-block;
+      padding: 0.65rem 1.3rem;
+      background: #111827;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 0.4rem;
+      margin-right: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .project-card a:hover {
+      background: #1f2937;
+    }
+
+    /* Skills (Badges) */
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.8rem;
+      background: #e5e7eb;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Presentation Script Box */
+    details {
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      border-left: 5px solid #111827;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- NETWORK SECURITY LOG ANALYZER PROJECT -->
+    <section class="project-card" id="network-security-log-analyzer">
+
+      <h3 class="section-title">Network Security Log Analyzer – Python, SQL & Firewall Logs</h3>
+
+      <!-- Short description -->
+      <p>
+        This project is a <strong>mini security data pipeline</strong> that analyzes firewall logs using 
+        <strong>Python, SQL, and data analytics</strong>. Firewall events are ingested into SQL tables, 
+        cleaned and transformed with Python (pandas), and then aggregated to identify top source IPs, 
+        busiest times, blocked vs allowed traffic, and high-severity alerts. The goal is to give 
+        security and IT teams a data-driven view of network behavior and potential threats.
+      </p>
+
+      <!-- (Optional) Diagram / screenshot of pipeline or charts -->
+      <!-- Update the src below if you add a real image to your GitHub repo -->
+      <img 
+        src="https://nmousa-netizen.github.io/nahin-portfolio/network-security-log-analyzer.png"
+        alt="Network Security Log Analyzer pipeline and charts"
+        class="project-image"
+      >
+
+      <!-- My Role -->
+      <h4>My Role in This Project</h4>
+      <p>
+        I acted as the <strong>Data Engineer</strong>, <strong>Security Analyst</strong>, and 
+        <strong>Python Developer</strong>. I designed the data model in SQL, wrote Python scripts to 
+        clean and enrich firewall logs, and created analytical views that can be used in dashboards or 
+        reports to support SOC and IT teams.
+      </p>
+
+      <ul>
+        <li><strong>Data Engineer</strong> – designed SQL tables for firewall events and optimized them for querying.</li>
+        <li><strong>Python Developer</strong> – used Python and pandas to load, clean, and transform log data.</li>
+        <li><strong>Security Analyst</strong> – defined metrics such as top talkers, high-risk ports, and peak alert times.</li>
+      </ul>
+
+      <!-- Data Pipeline Overview -->
+      <h4>Data Pipeline Overview</h4>
+      <ul>
+        <li><strong>Data Source:</strong> Exported firewall logs (CSV or JSON) containing fields such as:
+          <ul>
+            <li>Timestamp</li>
+            <li>Source IP / Destination IP</li>
+            <li>Source Port / Destination Port</li>
+            <li>Protocol</li>
+            <li>Action (Allowed / Blocked)</li>
+            <li>Severity or Log Category</li>
+          </ul>
+        </li>
+        <li><strong>Storage:</strong> Logs loaded into SQL tables (e.g., <code>FirewallEvents</code>) for structured querying.</li>
+        <li><strong>Processing:</strong> Python (pandas) script reads from SQL or raw files, cleans data, normalizes fields, and 
+            creates derived columns such as:
+          <ul>
+            <li>Hour of day / Day of week</li>
+            <li>Normalized severity levels</li>
+            <li>Geo tags (optional, based on IP)</li>
+          </ul>
+        </li>
+        <li><strong>Analytics:</strong> Python queries and SQL views used to generate summary tables and charts for:
+          <ul>
+            <li>Top source IPs and destinations</li>
+            <li>Blocked vs allowed traffic</li>
+            <li>Events by severity</li>
+            <li>Peak hours of suspicious activity</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Security Insights -->
+      <h4>Security Insights Generated</h4>
+      <ul>
+        <li><strong>Traffic Insights:</strong> Identify the most active IPs, most used ports, and common protocols.</li>
+        <li><strong>Threat Visibility:</strong> Highlight high-severity events, repeated blocked attempts, and suspicious patterns.</li>
+        <li><strong>Behavior Trends:</strong> Show peak hours of traffic, spikes in blocked activity, and changes over time.</li>
+        <li><strong>SOC Support:</strong> Provide summarized views that can be fed into dashboards for faster incident triage.</li>
+      </ul>
+
+      <!-- Why this project is valuable -->
+      <h4>Why This Project Is Valuable</h4>
+      <p>
+        This project connects <strong>Python + SQL + security logs</strong> and shows that I can build 
+        real-world data pipelines for cybersecurity. It combines:
+      </p>
+      <ul>
+        <li>Data ingestion and storage (SQL)</li>
+        <li>Data cleaning and transformation (Python / pandas)</li>
+        <li>Security analytics on firewall activity</li>
+        <li>Support for dashboards and SOC workflows</li>
+      </ul>
+      <p>
+        With more time and access to live data, this analyzer can be extended into a 
+        <strong>production-ready security analytics component</strong> that feeds SIEM tools or custom dashboards.
+      </p>
+
+      <!-- Project Links -->
+      <h4>Project Links</h4>
+      <p>
+        <a href="#" target="_blank">View Python notebook (GitHub)</a>
+        <a href="#" target="_blank">View SQL schema / scripts</a>
+      </p>
+
+      <!-- Skills Demonstrated -->
+      <h4>Skills Demonstrated</h4>
+      <p>
+        <span class="badge">Python</span>
+        <span class="badge">pandas</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Data Cleaning</span>
+        <span class="badge">ETL Pipeline</span>
+        <span class="badge">Firewall Logs</span>
+        <span class="badge">Security Analytics</span>
+        <span class="badge">Incident Detection</span>
+        <span class="badge">Problem Solving</span>
+      </p>
+
+      <!-- Presentation Script -->
+      <details>
+        <summary>Presentation Script (Click to Expand)</summary>
+        <p>
+          In this project, I built a <strong>Network Security Log Analyzer</strong> that focuses on 
+          firewall logs. The idea is to treat firewall events like data, and use Python and SQL to 
+          extract security insights from them.
+          <br><br>
+          First, I load firewall logs into SQL tables, then use Python and pandas to clean and 
+          normalize the data. From there, I analyze which IPs generate the most traffic, which ports 
+          are being targeted, how much traffic is blocked versus allowed, and when the busiest and 
+          riskiest times of day are.
+          <br><br>
+          This kind of analysis can support SOC teams by giving them quick views of high-severity 
+          events, repeated blocked attempts, and suspicious activity patterns. It demonstrates my 
+          ability to combine <strong>Python, SQL, and security thinking</strong> to build useful, 
+          data-driven tools for cybersecurity.
+        </p>
+      </details>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
