@@ -1,91 +1,185 @@
-<!-- IT Resource Center – SharePoint Project -->
-<section class="project-card" id="it-resource-center">
-  <h3 class="section-title">IT Resource Center – SharePoint Site (Michels)</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IT Resource Center – SharePoint Project</title>
 
-  <!-- Short description -->
-  <p>
-    I designed and built a modern SharePoint communication site that acts as a central
-    <strong>IT Resource Center</strong> for Michels employees. The site brings together
-    announcements, IT help, self-service tools, security training, and document governance
-    in one easy-to-use place.
-  </p>
+<style>
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-  <!-- Hero / screenshot of the site -->
-  <img
-    src="images/ITresourcecenter.png"
-    alt="IT Resource Center SharePoint home page"
-    class="project-image"
-  >
+  body {
+    background: #f4f5f7;
+    color: #222;
+    line-height: 1.6;
+    padding-bottom: 4rem;
+  }
 
-  <!-- Key features -->
-  <h4>Key Features I Implemented</h4>
-  <ul>
-    <li><strong>Branded landing page</strong> using Michels colors (red / white / black) with
-        a welcome banner and clear messaging: “Everything you need for work resources, files,
-        and announcements – all right here.”</li>
-    <li><strong>Announcements section</strong> so IT can quickly share news, outages, and
-        updates with all employees.</li>
-    <li><strong>Quick links &amp; navigation</strong> to:
-      <ul>
-        <li>IT help &amp; support</li>
-        <li>Password reset and access requests</li>
-        <li>Security policies and guidelines</li>
-        <li>New hire / onboarding resources</li>
-        <li>Training &amp; self-service how-to guides</li>
-      </ul>
-    </li>
-    <li><strong>Document libraries</strong> organized by category (policies, procedures,
-        guides, templates) with metadata and views to make content easy to find.</li>
-    <li><strong>Document life-cycle automation</strong> using Power Automate:
-      <ul>
-        <li>When a document is updated, users get email + Teams notifications.</li>
-        <li>Document owners receive alerts when others modify their content.</li>
-        <li>Every 3 months, owners get an automatic reminder to review/retire documents.</li>
-      </ul>
-    </li>
-    <li><strong>Self-service forms</strong> (SharePoint/Microsoft Forms) for reporting IT
-        issues, submitting suggestions, and requesting access – all feeding into SharePoint
-        lists for tracking.</li>
-    <li><strong>Security &amp; training area</strong> with links to security awareness training,
-        phishing guidance, and best-practice checklists.</li>
-    <li><strong>Analytics</strong> using SharePoint usage data and Power BI concepts to track
-        which pages and documents are used most.</li>
-  </ul>
+  /* MAIN CONTAINER */
+  .container {
+    max-width: 1050px;
+    margin: 2rem auto;
+    padding: 0 1.2rem;
+  }
 
-  <!-- Downloads / links -->
-  <h4>Project Links</h4>
-  <p>
-    <a href="#" target="_blank">View home page screenshot (full size)</a><br>
-    <a href="#" target="_blank">Download presentation (PPT)</a>
-  </p>
+  /* SECTION TITLE */
+  h3.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #111827;
+    padding-left: 0.6rem;
+    font-weight: bold;
+  }
 
-  <!-- Skills -->
-  <h4>Skills Demonstrated</h4>
-  <p>
-    <span class="badge">SharePoint Communication Site</span>
-    <span class="badge">UX / UI for Intranets</span>
-    <span class="badge">Microsoft 365</span>
-    <span class="badge">Power Automate</span>
-    <span class="badge">Document Governance</span>
-    <span class="badge">Security Awareness</span>
-    <span class="badge">Stakeholder Communication</span>
-  </p>
+  /* Project Card */
+  .project-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2.5rem;
+  }
 
-  <!-- Optional script for Showcase -->
-  <details>
-    <summary>Presentation Script (Click to Expand)</summary>
+  .project-card h4 {
+    font-size: 1.2rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    color: #111827;
+  }
+
+  .project-card p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #444;
+  }
+
+  /* Image */
+  .project-image {
+    width: 100%;
+    max-width: 950px;
+    display: block;
+    border-radius: 10px;
+    margin: 1rem 0 1.5rem;
+  }
+
+  /* Bulleted lists */
+  .project-card ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-card ul ul {
+    margin-top: 0.35rem;
+  }
+
+  /* Buttons */
+  .project-card a {
+    display: inline-block;
+    padding: 0.65rem 1.3rem;
+    background: #111827;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 0.4rem;
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .project-card a:hover {
+    background: #1f2937;
+  }
+
+  /* Skills (Badges) */
+  .badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    background: #e5e7eb;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Presentation Script Box */
+  details {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    border-left: 5px solid #111827;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- PROJECT CARD -->
+  <section class="project-card" id="it-resource-center">
+
+    <h3 class="section-title">IT Resource Center – SharePoint Site (Michels)</h3>
+
     <p>
-      In this project I designed an IT Resource Center for Michels on SharePoint. The goal
-      was to give employees one place for IT announcements, help, and documentation.
-      I created a branded landing page with clear navigation, then built libraries for
-      policies, procedures, and guides so content is organized and searchable.
-      <br><br>
-      I also automated the document life cycle using Power Automate: users are notified
-      when content changes, and owners receive quarterly reminders to review their
-      documents so information stays accurate. Finally, I added self-service forms and
-      a security training area so employees can solve common IT problems on their own.
-      This project shows my skills in SharePoint design, automation, and creating
-      real business value with Microsoft 365.
+      I designed and built a modern SharePoint communication site that serves as a central 
+      <strong>IT Resource Center</strong> for Michels employees. It brings together announcements, 
+      self-service IT tools, security training, and automated document governance in one 
+      user-friendly portal.
     </p>
-  </details>
-</section>
+
+    <!-- Hero Image -->
+    <img 
+      src="https://nmousa-netizen.github.io/nahin-portfolio/ITresourcecenter.png"
+      alt="IT Resource Center SharePoint home page"
+      class="project-image"
+    >
+
+    <h4>Key Features I Implemented</h4>
+    <ul>
+      <li><strong>Branded landing page</strong> using Michels colors (red / white / black) with a modern welcome banner.</li>
+      <li><strong>Announcements area</strong> for IT updates, alerts, and organization-wide communication.</li>
+      <li><strong>Quick links</strong> to common IT needs:
+        <ul>
+          <li>Password reset & access requests</li>
+          <li>IT help & support</li>
+          <li>Security policies & best practices</li>
+          <li>Training & how-to guides</li>
+          <li>Onboarding resources</li>
+        </ul>
+      </li>
+      <li><strong>Organized document libraries</strong> with metadata, views, and structure for policies, procedures, and templates.</li>
+      <li><strong>Document life-cycle automation</strong> using Power Automate:
+        <ul>
+          <li>Email + Teams alert when a document is updated</li>
+          <li>Owners notified when content changes</li>
+          <li>Quarterly reminders to review or retire documents</li>
+        </ul>
+      </li>
+      <li><strong>Self-service forms</strong> for IT requests and suggestions (Forms → SharePoint Lists).</li>
+      <li><strong>Security training hub</strong> including phishing guidance and compliance resources.</li>
+      <li><strong>Analytics insights</strong> using SharePoint usage and Power BI concepts.</li>
+    </ul>
+
+    <h4>Project Links</h4>
+    <a href="#" target="_blank">View Screenshot (Full Size)</a>
+    <a href="#" target="_blank">Download PPT</a>
+
+    <h4>Skills Demonstrated</h4>
+    <p>
+      <span class="badge">SharePoint Communication Site</span>
+      <span class="badge">UX / UI for Intranets</span>
+      <span class="badge">Microsoft 365</span>
+      <span class="badge">Power Automate</span>
+      <span class="badge">D
