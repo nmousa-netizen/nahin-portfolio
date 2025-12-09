@@ -1,151 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>IT Resource Center – SharePoint Project</title>
+  <meta charset="UTF-8">
+  <title>IT Resource Center – SharePoint Project</title>
 
-<style>
-  /* Global Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-  body {
-    background: #f4f5f7;
-    color: #222;
-    line-height: 1.6;
-    padding-bottom: 4rem;
-  }
+    body {
+      background: #f4f5f7;
+      color: #222;
+      line-height: 1.6;
+      padding-bottom: 4rem;
+    }
 
-  /* MAIN CONTAINER */
-  .container {
-    max-width: 1050px;
-    margin: 2rem auto;
-    padding: 0 1.2rem;
-  }
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1050px;
+      margin: 2rem auto;
+      padding: 0 1.2rem;
+    }
 
-  /* SECTION TITLE */
-  h3.section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #111827;
-    padding-left: 0.6rem;
-    font-weight: bold;
-  }
+    /* SECTION TITLE */
+    h3.section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #111827;
+      padding-left: 0.6rem;
+      font-weight: bold;
+    }
 
-  /* Project Card */
-  .project-card {
-    background: white;
-    padding: 1.8rem;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin-bottom: 2.5rem;
-  }
+    /* Project Card */
+    .project-card {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2.5rem;
+    }
 
-  .project-card h4 {
-    font-size: 1.2rem;
-    margin-top: 1.3rem;
-    margin-bottom: 0.6rem;
-    font-weight: bold;
-    color: #111827;
-  }
+    .project-card h4 {
+      font-size: 1.2rem;
+      margin-top: 1.3rem;
+      margin-bottom: 0.6rem;
+      font-weight: bold;
+      color: #111827;
+    }
 
-  .project-card p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: #444;
-  }
+    .project-card p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #444;
+    }
 
-  /* Image */
-  .project-image {
-    width: 100%;
-    max-width: 950px;
-    display: block;
-    border-radius: 10px;
-    margin: 1rem 0 1.5rem;
-  }
+    /* Image */
+    .project-image {
+      width: 100%;
+      max-width: 950px;
+      display: block;
+      border-radius: 10px;
+      margin: 1rem 0 1.5rem;
+    }
 
-  /* Bulleted lists */
-  .project-card ul {
-    margin-left: 1.2rem;
-    margin-bottom: 1rem;
-  }
+    /* Bulleted lists */
+    .project-card ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
 
-  .project-card ul ul {
-    margin-top: 0.35rem;
-  }
+    .project-card ul ul {
+      margin-top: 0.35rem;
+    }
 
-  /* Buttons */
-  .project-card a {
-    display: inline-block;
-    padding: 0.65rem 1.3rem;
-    background: #111827;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 0.4rem;
-    margin-right: 0.4rem;
-    font-size: 0.9rem;
-  }
+    /* Buttons */
+    .project-card a {
+      display: inline-block;
+      padding: 0.65rem 1.3rem;
+      background: #111827;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 0.4rem;
+      margin-right: 0.4rem;
+      font-size: 0.9rem;
+    }
 
-  .project-card a:hover {
-    background: #1f2937;
-  }
+    .project-card a:hover {
+      background: #1f2937;
+    }
 
-  /* Skills (Badges) */
-  .badge {
-    display: inline-block;
-    padding: 0.35rem 0.8rem;
-    background: #e5e7eb;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    margin-right: 0.4rem;
-    margin-bottom: 0.5rem;
-  }
+    /* Skills (Badges) */
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.8rem;
+      background: #e5e7eb;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
 
-  /* Presentation Script Box */
-  details {
-    background: #f9fafb;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 1rem;
-    border-left: 5px solid #111827;
-  }
+    /* Presentation Script Box */
+    details {
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      border-left: 5px solid #111827;
+    }
 
-  summary {
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-</style>
-
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <!-- PROJECT CARD -->
-  <section class="project-card" id="it-resource-center">
+    <!-- PROJECT CARD -->
+    <section class="project-card" id="it-resource-center">
 
-    <h3 class="section-title">IT Resource Center – SharePoint Site (Michels)</h3>
+      <h3 class="section-title">IT Resource Center – SharePoint Site (Michels)</h3>
 
-    <p>
-      I designed and built a modern SharePoint communication site that serves as a central 
-      <strong>IT Resource Center</strong> for Michels employees. It brings together announcements, 
-      self-service IT tools, security training, and automated document governance in one 
-      user-friendly portal.
-    </p>
+      <!-- Short description -->
+      <p>
+        I designed and built a modern SharePoint communication site that serves as a central 
+        <strong>IT Resource Center</strong> for Michels employees. It brings together announcements, 
+        self-service IT tools, security training, and automated document governance in one 
+        user-friendly portal.
+      </p>
 
-    <!-- Hero Image -->
-    <img 
-      src="https://nmousa-netizen.github.io/nahin-portfolio/ITresourcecenter.png"
-      alt="IT Resource Center SharePoint home page"
-      class="project-image"
-    >
+      <!-- My Role -->
+      <h4>My Role in This Project</h4>
+      <p>
+        I served as the <strong>Project Coordinator</strong>, <strong>Business Analyst</strong>, and 
+        <strong>UX/UI Lead</strong> for this IT Resource Center initiative. I worked with stakeholders,
+        gathered requirements, prioritized features, and ensured the final solution aligned with both
+        technical and business needs.
+      </p>
+      <ul>
+        <li><strong>Project Coordinator</strong> – managed timelines, organized tasks, facilitated team communication, and ensured project delivery.</li>
+        <li><strong>Business Analyst</strong> – documented requirements, analyzed pain points, and translated business needs into SharePoint features.</li>
+        <li><strong>UX/UI Lead</strong> – designed page layouts, navigation structure, user journeys, and visual elements.</li>
+        <li><strong>Tools &amp; Platforms Learned and Used</strong>:
+          <ul>
+            <li><strong>Jira</strong> for project management and sprint planning</li>
+            <li><strong>Figma</strong> for UX/UI wireframes and design mockups</li>
+            <li><strong>Microsoft 365 + SharePoint</strong> for site creation and configuration</li>
+          </ul>
+        </li>
+      </ul>
 
-    <h4>Key Features I Implemented</h4>
-    <ul>
-      <li><strong>Branded
+      <!-- Hero Image -->
+      <img 
+        src="https://nmousa-netizen.github.io/nahin-portfolio/ITresourcecenter.png"
+        alt="IT Resource Center SharePoint home page"
+        class="project-image"
+      >
+
+      <!-- Key Features -->
+      <h4>Key Features I Implemented</h4>
+      <ul>
+        <li><strong>Branded landing page</strong> using Michels colors (red / white / black) with a modern welcome banner.</li>
+
+        <li><strong>Built an AI Agent named MICO</strong> to enhance the user experience:
+          <ul>
+            <li>MICO searches the entire SharePoint site and document libraries</li>
+            <li>Finds documents by title and keywords</li>
+            <li>Reads inside documents (Word, PDF, Excel) to return accurate matches</li>
+            <li>Provides instant AI-generated summaries of any document</li>
+            <li>Helps employees discover policies, guides, and resources faster</li>
+          </ul>
+        </li>
+
+        <li><strong>User Analytics &amp; Web Performance Dashboard</strong> built in Power BI:
+          <ul>
+            <li>Tracks what pages employees visit the most</li>
+            <li>Shows search trends and what users are looking for</li>
+            <li>Monitors document engagement (views, updates, downloads)</li>
+            <li>Highlights top IT resources accessed by the organization</li>
+            <li>Provides managers insights into website performance and employee needs</li>
+          </ul>
+        </li>
+
+        <li><strong>Announcements area</strong> for IT updates, alerts, and organization-wide communication.</li>
+
+        <li><strong>Quick links</strong> to common IT needs:
+          <ul>
+            <li>Password reset &amp; access requests</li>
+            <li>IT help &amp; support</li>
+            <li>Security policies &amp; best practices</li>
+            <li>Training &amp; how-to guides</li>
+            <li>Onboarding resources</li>
+          </ul>
+        </li>
+
+        <li><strong>Organized document libraries</strong> with metadata, views, and structure for policies, procedures, and templates.</li>
+
+        <li><strong>Document life-cycle automation</strong> using Power Automate:
+          <ul>
+            <li>Email + Teams alert when a document is updated</li>
+            <li>Owners notified when content changes</li>
+            <li>Quarterly reminders to review or retire documents</li>
+          </ul>
+        </li>
+
+        <li><strong>Self-service forms</strong> for IT requests and suggestions (Forms → SharePoint Lists).</li>
+
+        <li><strong>Security training hub</strong> including phishing guidance and compliance resources.</li>
+
+        <li><strong>Analytics insights</strong> using SharePoint usage and Power BI concepts.</li>
+      </ul>
+
+      <!-- Downloads / links -->
+      <h4>Project Links</h4>
+      <a href="#" target="_blank">View Screenshot (Full Size)</a>
+      <a href="#" target="_blank">Download PPT</a>
+
+      <!-- Skills -->
+      <h4>Skills Demonstrated</h4>
+      <p>
+        <span class="badge">SharePoint Communication Site</span>
+        <span class="badge">UX / UI for Intranets</span>
+        <span class="badge">Microsoft 365</span>
+        <span class="badge">Power Automate</span>
+        <span class="badge">AI Search Integration (MICO)</span>
+        <span class="badge">Power BI User Analytics</span>
+        <span class="badge">Document Governance</span>
+        <span class="badge">Security Awareness</span>
+        <span class="badge">Stakeholder Communication</span>
+        <span class="badge">Project Coordination</span>
+        <span class="badge">Business Analysis</span>
+        <span class="badge">UX/UI Design</span>
+        <span class="badge">Jira</span>
+        <span class="badge">Figma</span>
+      </p>
+
+      <!-- Presentation Script -->
+      <details>
+        <summary>Presentation Script (Click to Expand)</summary>
+        <p>
+          In this project, I built a modern IT Resource Center for Michels using SharePoint. 
+          My goal was to centralize IT communication, documentation, and self-service tools so 
+          employees could easily find what they need.
+          <br><br>
+          I served as Project Coordinator, Business Analyst, and UX/UI Lead – managing timelines,
+          gathering requirements, and designing the overall user experience. I created a branded 
+          landing page, organized document libraries, automated document governance with Power Automate,
+          and added self-service forms for IT support and security processes.
+          <br><br>
+          I also built an <strong>AI Agent named MICO</strong>, which can search the entire site, 
+          find documents by title or keyword, read inside files, and return fast AI-generated summaries.
+          On top of that, I designed a <strong>User Analytics &amp; Web Performance Dashboard</strong> 
+          in Power BI so managers can see which pages and resources employees use the most and what they 
+          are searching for.
+          <br><br>
+          This project demonstrates my ability to design enterprise portals, integrate AI, use analytics, 
+          streamline IT workflows, and deliver real business value using Microsoft 365.
+        </p>
+      </details>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
